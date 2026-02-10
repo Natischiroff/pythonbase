@@ -6,4 +6,7 @@ while True:
         print("O nome não pode ser vazio.")
 
 
-        if 0 <= senha <=10
+        if 0 <= senha <=10:
+            break
+        else:
+            print("A senha deve ter 6 caracteries")
