@@ -1,15 +1,28 @@
-print('*****************')
-print('**** jogo de adivinhação*****')
-print('*****************')
+print('*********************************')
+print('*******Jogo de Adivinhação*******')
+print('*********************************')
 
 numero_secreto = 39
+total_tentativas = 3
+rodada = 1
 
-chute_str = input("Digite seu numero: ")
+while (rodada <= total_tentativas):
+    chute_str = input("Digite seu número: ")
 
-print("Seu numero é:",chute_str)
+    print("Seu número é: ", chute_str)
+    chute = int(chute_str)
+    acertou = chute == numero_secreto
+    maior = chute > numero_secreto
+    menor = chute < numero_secreto
 
-if (numero_secreto == chute_str):
-    print("Você acertou!!")
+    if(acertou):
+        print("Você acertou! ")
+        break
+    else:
+        if(maior):
+            print("O seu chute foi maior que o número secreto")
+        elif(menor):
+            print("O seu chute foi menor que o número secreto")
+    rodada = rodada+1
 
-else:
-    print("Você errou  :(")
+print("Fim de jogo!")
